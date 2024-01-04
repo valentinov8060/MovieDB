@@ -23,9 +23,9 @@
                     MovieDB
                </a>
                <form class="d-flex" role="search" style="margin-left: 13px; margin-top: 5px;">
-                    <input class="form-control border-0 bg-black rounded-pill" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control border-0 bg-black rounded-pill" type="search" placeholder="Search" aria-label="Search" id="input-keyword">
 
-                    <button class="btn btn-outline-light rounded-circle border-0 ms-3" type="submit">
+                    <button class="btn btn-outline-light rounded-circle border-0 ms-3" type="button" id="search-button">
                          <a href="#yourSearch">
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="margin-top: -1px; margin-right: -1px;">
                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
@@ -37,16 +37,14 @@
      </nav>
      <!-- end Navbar -->
 
-
-     <!-- container for web -->
+     <!-- container -->
      <div class="container-xl" style="margin-top: 110px;">
           <div class="row ">
                <div class="col col-lg-4">
-
                     <h1 class="border-bottom border-4 border-light" style="color: white;">
                          For You
                     </h1>
-                    
+
                     <!-- carousel -->
                     <div class="row justify-content-center">
                          <div id="carouselExample" class="carousel slide " style="width: 450px;">
@@ -64,51 +62,50 @@
                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                    <span class="visually-hidden">Previous</span>
                               </button>
+
                               <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                    <span class="visually-hidden">Next</span>
                               </button>
                          </div>
                     </div>
-
+                    <!-- end carousel -->
                </div>
 
                <div class="col col-sm-8">
-
                     <h1 class="border-bottom border-4 border-light" style="color: white;" id="yourSearch">
                          Your Search
                     </h1>
 
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
-                         <div class="col">
-                              <div class="card">
-                                   <img src="img/poster/poster-1.jpg" class="card-img-top" alt="..." height="600px">
-                                   <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                   </div>
-                              </div>
-                         </div>
-
-                         <div class="col">
-                              <div class="card">
-                                   <img src="img/poster/poster-2.png" class="card-img-top" alt="..." height="600px">
-                                   <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                   </div>
-                              </div>
-                         </div>
-
+                    <div class="row row-cols-1 row-cols-md-2 g-4" id="search-movie-container">
+                         <!-- javascript -->
                     </div>
                </div>
-
           </div>
      </div>
+     <!-- end container -->
 
+     <!-- modal -->
+     <div class="modal fade" id="movieDetailModal" tabindex="-1" aria-labelledby="movieDetailModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+               <div class="modal-content">
+                    <div class="modal-header">
+                         <h1 class="modal-title fs-5" id="movieDetailModalLabel">Movie Detail</h1>
+                    </div>
+                    <div class="modal-body">
+                         <!-- javascript -->
+                    </div>
+                    <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- end Modal -->
+
+     <!-- javascript bootstrap -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+     <!-- my javascript -->
      <script src="script.js"></script>
 </body>
 </html>
